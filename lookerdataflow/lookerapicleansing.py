@@ -126,7 +126,7 @@ for explore in explores:
 
   #Write all explore related data into data_looker.txt
 
-  text_file.write(str(sdk.lookml_model_explore('snowflake',str(explore))))
+  text_file.write(str(sdk.lookml_model_explore(project,str(explore))))
 
   #close file
   text_file.close()

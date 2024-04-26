@@ -103,8 +103,9 @@ with open(explore_file_path, 'r') as file:
 with open(project_file_path, 'r') as file:
     project_list = [line.strip() for line in file]
     if project_list:  # Check if the list is not empty
-        project = str(project_list[0])
+        project = project_list[0]
         print(type(project))
+        print(project)
     else:
         print("Project list is empty or file is empty.")
 
@@ -125,7 +126,7 @@ for explore in explores:
 
   #Write all explore related data into data_looker.txt
 
-  text_file.write(str(sdk.lookml_model_explore(str(project),str(explore))))
+  text_file.write(str(sdk.lookml_model_explore(project,str(explore))))
 
   #close file
   text_file.close()

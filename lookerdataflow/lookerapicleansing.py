@@ -103,6 +103,7 @@ with open(explore_file_path, 'r') as file:
 with open(project_file_path, 'r') as file:
     project_list = [line.strip() for line in file] #In case there is a mistake of more than 1 project
     project = project_list[0]
+    print(str(project))
 
 
 # Print the list of explore names

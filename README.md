@@ -1,5 +1,5 @@
-# LookerDataFlow
-Experience complete transparency in your data journey with Looker Dataflow. Trace transformations from dashboards to source tables, facilitating debugging and understanding dashboard impacts. Simplify troubleshooting and ensure data integrity effortlessly.
+# LookmlDataFlow
+Experience complete transparency in your data journey with Lookml Dataflow. Trace transformations from dashboards to source tables, facilitating debugging and understanding dashboard impacts. Simplify troubleshooting and ensure data integrity effortlessly.
 
 Welcome to the Looker Dataflow!
 
@@ -49,7 +49,7 @@ python -m pip install looker_sdk
 
 ## Open the LookerDataFlow repository that you just cloned
 ```
-cd LookerDataFlow/
+cd LookmlDataFlow/
 ```
 
 ### Now you can run the lookerapicleansing.py

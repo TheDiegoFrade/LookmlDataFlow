@@ -101,9 +101,13 @@ with open(explore_file_path, 'r') as file:
 
 # Read the lines from the project file
 with open(project_file_path, 'r') as file:
-    project_list = [line.strip() for line in file] #In case there is a mistake of more than 1 project
-    project = str(project_list[0])
-    print(project)
+    project_list = [line.strip() for line in file]
+    if project_list:  # Check if the list is not empty
+        project = str(project_list[0])
+        print(type(project))
+    else:
+        print("Project list is empty or file is empty.")
+
 
 
 # Print the list of explore names

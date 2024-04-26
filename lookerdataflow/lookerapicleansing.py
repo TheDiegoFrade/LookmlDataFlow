@@ -103,9 +103,9 @@ with open(explore_file_path, 'r') as file:
 with open(project_file_path, 'r') as file:
     project_list = [line.strip() for line in file]
     if project_list:  # Check if the list is not empty
-        project = project_list[0]
-        print(type(project))
-        print(str(project))
+        project_name = project_list[0]
+        print(type(project_name))
+        print(str(project_name))
         
     else:
         print("Project list is empty or file is empty.")
@@ -127,7 +127,7 @@ for explore in explores:
 
   #Write all explore related data into data_looker.txt
 
-  text_file.write(str(sdk.lookml_model_explore(str(project),str(explore))))
+  text_file.write(str(sdk.lookml_model_explore(str(project_name),str(explore))))
 
   #close file
   text_file.close()
@@ -270,7 +270,7 @@ for explore in explores:
   #open text file
   text_file = open(data_looker_path, "w")
 
-  text_file.write(str(sdk.lookml_model_explore('snowflake',str(explore))))
+  text_file.write(str(sdk.lookml_model_explore(str(project_name),str(explore))))
 
   #close file
   text_file.close()

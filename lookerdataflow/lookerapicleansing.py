@@ -105,7 +105,8 @@ with open(project_file_path, 'r') as file:
     if project_list:  # Check if the list is not empty
         project = project_list[0]
         print(type(project))
-        print(project)
+        print(str(project))
+        
     else:
         print("Project list is empty or file is empty.")
 

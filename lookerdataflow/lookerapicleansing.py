@@ -269,7 +269,7 @@ for explore in explores:
   #open text file
   text_file = open(data_looker_path, "w")
 
-  text_file.write(str(sdk.lookml_model_explore(str(project),str(explore))))
+  text_file.write(str(sdk.lookml_model_explore('snowflake',str(explore))))
 
   #close file
   text_file.close()

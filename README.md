@@ -22,58 +22,58 @@ There are some things you need to do first.
 
 ## How to Use
 
-### Please install Python
+1. Please install Python
 
-### Create a virtual environment
+2. Create a virtual environment
 ```
 python3 -m venv path/to/venv
 ```
 
-### Activate the virtual environment
+3. Activate the virtual environment
 ```
 source path/to/venv/bin/activate
 ```
-### Install packages within the virtual environment
+4. Install packages within the virtual environment
 ```
 python -m pip install pandas
 ```
-### Install the looker SDK:
+5. Install the looker SDK:
 ```
 python -m pip install looker_sdk
 ```
-#### Add the needed credentials and url into lookercredentials.ini file in your local environment
+6. Add the needed credentials and url into lookercredentials.ini file in your local environment
 ```
 Remember that these credentials are private and should not be shared to anyone, as they could delete or modify on your behalf.
 ```
-#### Add all the explores names into explores.txt in the repository file in your local environment
+7. Add all the explores names into explores.txt in the repository file in your local environment
 ![Screenshot 2024-04-25 at 4 59 17 p m](https://github.com/TheDiegoFrade/LookmlDataFlow/assets/40186865/b44d4833-9b96-499c-9ed0-9f284dc7b940)
 
-### Add your project name into project.txt It should only be 1 name. You can change it in the future but one project at a time.
+8. Add your project name into project.txt It should only be 1 name. You can change it in the future but one project at a time.
 
-## Open the LookerDataFlow repository that you just cloned
+9. Open the LookerDataFlow repository that you just cloned
 ```
 cd LookmlDataFlow/
 ```
 
-### Now you can run the lookerapicleansing.py
+10. Now you can run the lookerapicleansing.py
 ```
 python lookerdataflow/lookerapicleansing.py
 ```
-### You will get 3 files as a result, upload them into you datawarehouse tool as independent tables. 
+11. You will get 3 files as a result, upload them into you datawarehouse tool as independent tables. 
 ![Screenshot 2024-04-25 at 10 45 14 p m](https://github.com/TheDiegoFrade/LookmlDataFlow/assets/40186865/f248ca50-57ef-403a-a2fe-14ec84cc69a3)
 
 
 
-### Drag and drop the lookml_views file into your Looker Project
+12. Drag and drop the lookml_views file into your Looker Project
 ![Screenshot 2024-04-25 at 10 57 05 p m](https://github.com/TheDiegoFrade/LookmlDataFlow/assets/40186865/47af9bfc-914f-439e-ba6f-3ec4b91ee3b9)
 
 
-[Looker Documentation](https://cloud.google.com/looker/docs/creating-project-files#uploading_files)
+[Drag and drop Lookml files into your project](https://cloud.google.com/looker/docs/creating-project-files#uploading_files)
 
 
 
-### Configure your Lookml Model so you include these views and explores, edit as needed.
+13. Configure your Lookml Model so you include these views and explores, edit as needed.**
 
-### Import the **lookml_dataflow.dashboard.lookml** into your Looker project files
+14. Import the **lookml_dataflow.dashboard.lookml** into your Looker project files
 
-[Looker Documentation](https://cloud.google.com/looker/docs/building-lookml-dashboards#lookml_dashboards_folder)
+[Lookml defined dashboard import](https://cloud.google.com/looker/docs/building-lookml-dashboards#lookml_dashboards_folder)

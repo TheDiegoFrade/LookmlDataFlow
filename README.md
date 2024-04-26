@@ -1,7 +1,9 @@
-# LookmlDataFlow
+# LookmlDataFlow About
 Experience complete transparency in your data journey with Lookml Dataflow. Trace transformations from dashboards to source tables, facilitating debugging and understanding dashboard impacts. Simplify troubleshooting and ensure data integrity effortlessly.
 
-Welcome to the Looker Dataflow!
+# Welcome to the Looker Dataflow!
+
+## Requirements 
 
 There are some things you need to do first. 
 
@@ -18,9 +20,9 @@ There are some things you need to do first.
         }
 ```
 
-### Please install Python
+## How to Use
 
-### Clone the Repository
+### Please install Python
 
 ### Create a virtual environment
 ```

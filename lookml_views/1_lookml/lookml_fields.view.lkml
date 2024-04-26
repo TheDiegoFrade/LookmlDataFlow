@@ -163,16 +163,16 @@ view: lookml_fields {
 
 
 
-  dimension: snowflake_table {
-    description: "LookML Field Snowflake Table"
+  dimension: table {
+    description: "LookML Field Table"
     type: string
-    sql: ${TABLE}.snowflake_table ;;
+    sql: ${TABLE}.table ;;
   }
 
-  dimension: snowflake_text {
-    description: "Snowflake Table"
+  dimension: table_text {
+    description: "Table"
     type: string
-    sql: 'Snowflake' ;;
+    sql: 'YOUR_DWH_TOOL' ;;
   }
 
   ## Measures
@@ -181,14 +181,14 @@ view: lookml_fields {
     label: "Total Fields"
     type: count_distinct
     sql: ${name} ;;
-    drill_fields: [id,name,view,category,description,label,field_type,sql,snowflake_table]
+    drill_fields: [id,name,view,category,description,label,field_type,sql,table]
   }
 
   measure: unique_dimensions_count {
     label: "Total Dimensions"
     type: count_distinct
     sql: ${name} ;;
-    drill_fields: [id,name,view,category,description,label,field_type,sql,snowflake_table]
+    drill_fields: [id,name,view,category,description,label,field_type,sql,table]
     filters: [category: "dimension"]
   }
 
@@ -196,7 +196,7 @@ view: lookml_fields {
     label: "Total Measures"
     type: count_distinct
     sql: ${name} ;;
-    drill_fields: [id,name,view,category,description,label,field_type,sql,snowflake_table]
+    drill_fields: [id,name,view,category,description,label,field_type,sql,table]
     filters: [category: "measure"]
   }
 
@@ -204,14 +204,14 @@ view: lookml_fields {
     label: "Total Views"
     type: count_distinct
     sql: ${view} ;;
-    drill_fields: [id,name,view,category,description,label,field_type,sql,snowflake_table]
+    drill_fields: [id,name,view,category,description,label,field_type,sql,table]
   }
 
-  measure: unique_snowflake_tables_count {
-    label: "Total Snowflake Tables"
+  measure: unique_tables_count {
+    label: "Total Tables"
     type: count_distinct
-    sql: ${snowflake_table} ;;
-    drill_fields: [id,name,view,category,description,label,field_type,sql,snowflake_table]
+    sql: ${table} ;;
+    drill_fields: [id,name,view,category,description,label,field_type,sql,table]
   }
 
   measure: counter {

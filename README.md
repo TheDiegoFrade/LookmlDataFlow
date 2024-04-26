@@ -3,7 +3,7 @@ Experience complete transparency in your data journey with Lookml Dataflow. Trac
 
 Welcome to the Looker Dataflow!
 
-Before running the script there are some things you need to do first. 
+There are some things you need to do first. 
 
 1. Add this dimension to all the **non derived tables** views that you use in your explores. The dimension must match with the **sql_table_name**. This way we can know
    where these dimensions and measures pull their data from.

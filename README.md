@@ -43,8 +43,9 @@ python -m pip install looker_sdk
 
 #### Remember that these credentials are private and should not be shared to anyone, as they could delete or modify on your behalf.
 
-#### Add a![Screenshot 2024-04-25 at 4 59 17 p m](https://github.com/TheDiegoFrade/LookmlDataFlow/assets/40186865/b44d4833-9b96-499c-9ed0-9f284dc7b940)
-ll the explores names into explores.txt in the repository file in your local environment
+#### Add all the explores names into explores.txt in the repository file in your local environment
+![Screenshot 2024-04-25 at 4 59 17 p m](https://github.com/TheDiegoFrade/LookmlDataFlow/assets/40186865/b44d4833-9b96-499c-9ed0-9f284dc7b940)
+
 
 
 
@@ -57,15 +58,18 @@ cd LookmlDataFlow/
 ```
 python lookerapicleansing.py
 ```
-### You will g![Screenshot 2024-04-25 at 10 45 14 p m](https://github.com/TheDiegoFrade/LookmlDataFlow/assets/40186865/f248ca50-57ef-403a-a2fe-14ec84cc69a3)
-et 3 files as a result, upload them into you datawarehouse tool as independent tables. 
+### You will get 3 files as a result, upload them into you datawarehouse tool as independent tables. 
+![Screenshot 2024-04-25 at 10 45 14 p m](https://github.com/TheDiegoFrade/LookmlDataFlow/assets/40186865/f248ca50-57ef-403a-a2fe-14ec84cc69a3)
+
 
 
 ### Drag and drop the lookml_views file into your Looker Project
+![Screenshot 2024-04-25 at 10 57 05 p m](https://github.com/TheDiegoFrade/LookmlDataFlow/assets/40186865/47af9bfc-914f-439e-ba6f-3ec4b91ee3b9)
 
 
-[Looker documentati![Screenshot 2024-04-25 at 10 57 05 p m](https://github.com/TheDiegoFrade/LookmlDataFlow/assets/40186865/47af9bfc-914f-439e-ba6f-3ec4b91ee3b9)
-on link](https://cloud.google.com/looker/docs/creating-project-files#uploading_files)
+[Looker documentation link](https://cloud.google.com/looker/docs/creating-project-files#uploading_files)
+
+
 
 ### Configure your Lookml Model so you include these views and explores, edit as needed.
 

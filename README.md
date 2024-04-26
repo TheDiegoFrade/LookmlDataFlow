@@ -42,9 +42,9 @@ python -m pip install pandas
 python -m pip install looker_sdk
 ```
 #### Add the needed credentials and url into lookercredentials.ini file in your local environment
-
-#### Remember that these credentials are private and should not be shared to anyone, as they could delete or modify on your behalf.
-
+```
+Remember that these credentials are private and should not be shared to anyone, as they could delete or modify on your behalf.
+```
 #### Add all the explores names into explores.txt in the repository file in your local environment
 ![Screenshot 2024-04-25 at 4 59 17 p m](https://github.com/TheDiegoFrade/LookmlDataFlow/assets/40186865/b44d4833-9b96-499c-9ed0-9f284dc7b940)
 

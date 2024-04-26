@@ -218,18 +218,18 @@ for explore in explores:
 
 lookml_model_explore_field_df = pd.DataFrame.from_records(columns, columns=labels)
 
-#Lookml Model Explore Views and Snowflake Database
+#Lookml Model Explore Views and Database
 
 #Get all rows where label = 'For Testing', it is a dimension defined in LookML to obtain the SQL_TABLE_NAME
 lookml_model_explore_views_df = lookml_model_explore_field_df.loc[lookml_model_explore_field_df['label'] == "For Testing"][['view','sql']]
 #Change column labels
-lookml_model_explore_views_df.columns = ['view','snowflake_table']
+lookml_model_explore_views_df.columns = ['view','table']
 
 #Get rid of all dummy dimensions in the dataframe
 
 lookml_model_explore_field_df = lookml_model_explore_field_df[lookml_model_explore_field_df['label'] != "For Testing"]
 
-#Left join to lookml_model_explore_views_df by view to get the "snowflake_table" column
+#Left join to lookml_model_explore_views_df by view to get the "table" column
 lookml_model_explore_field_df = lookml_model_explore_field_df.merge(lookml_model_explore_views_df, on='view', how='left')
 
 #Clean Group Labels
@@ -311,7 +311,7 @@ for explore in explores:
 
 lookml_model_explore_joins_df = pd.DataFrame.from_records(columns, columns=labels)
 
-#Left join by view to get the "snowflake_table" column
+#Left join by view to get the "table" column
 lookml_model_explore_joins_df = lookml_model_explore_joins_df.merge(lookml_model_explore_views_df, on='view', how='left')
 
 #Eliminate recursive
@@ -436,7 +436,7 @@ clean_dashboards_dataframe = clean_dashboards_dataframe.replace(',','', regex=Tr
 clean_dashboards_dataframe['id'] = clean_dashboards_dataframe['id'].astype(str)
 
 
-#Left join by view to get the "snowflake_table" column
+#Left join by view to get the "table" column
 clean_dashboards_dataframe = clean_dashboards_dataframe.merge(lookml_dashboards_df, on='id', how='left')
 clean_dashboards_dataframe = clean_dashboards_dataframe.replace(',','', regex=True)
 clean_dashboards_dataframe = clean_dashboards_dataframe.iloc[:, [0,1,2,3,4,5,6,8,7]]

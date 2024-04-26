@@ -46,8 +46,7 @@ python -m pip install looker_sdk
 #### Add all the explores names into explores.txt in the repository file in your local environment
 ![Screenshot 2024-04-25 at 4 59 17 p m](https://github.com/TheDiegoFrade/LookmlDataFlow/assets/40186865/b44d4833-9b96-499c-9ed0-9f284dc7b940)
 
-
-
+### Add your project name into project.txt It should only be 1 name. You can change it in the future but one project at a time.
 
 ## Open the LookerDataFlow repository that you just cloned
 ```

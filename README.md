@@ -55,7 +55,7 @@ cd LookmlDataFlow/
 
 ### Now you can run the lookerapicleansing.py
 ```
-python lookerapicleansing.py
+python lookerdataflow/lookerapicleansing.py
 ```
 ### You will get 3 files as a result, upload them into you datawarehouse tool as independent tables. 
 ![Screenshot 2024-04-25 at 10 45 14 p m](https://github.com/TheDiegoFrade/LookmlDataFlow/assets/40186865/f248ca50-57ef-403a-a2fe-14ec84cc69a3)

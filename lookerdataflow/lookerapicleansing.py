@@ -102,8 +102,8 @@ with open(explore_file_path, 'r') as file:
 # Read the lines from the project file
 with open(project_file_path, 'r') as file:
     project_list = [line.strip() for line in file] #In case there is a mistake of more than 1 project
-    project = project_list[0]
-    print(str(project))
+    project = str(project_list[0])
+    print(project)
 
 
 # Print the list of explore names
@@ -121,7 +121,7 @@ for explore in explores:
 
   #Write all explore related data into data_looker.txt
 
-  text_file.write(str(sdk.lookml_model_explore(str(project),str(explore))))
+  text_file.write(str(sdk.lookml_model_explore(project,str(explore))))
 
   #close file
   text_file.close()

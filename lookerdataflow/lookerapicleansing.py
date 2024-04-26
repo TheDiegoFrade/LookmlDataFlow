@@ -92,9 +92,18 @@ text_file = open(data_looker_path, 'a+')
 # Specify the path to your explores.txt file
 explore_file_path = os.path.join(parent_dir, 'LookmlDataFlow/LookerDataFlow/explores.txt')
 
-# Read the lines from the file
+# Specify the path to your project.txt file
+project_file_path = os.path.join(parent_dir, 'LookmlDataFlow/LookerDataFlow/project.txt')
+
+# Read the lines from the explore file
 with open(explore_file_path, 'r') as file:
     explores = [line.strip() for line in file]
+
+# Read the lines from the project file
+with open(project_file_path, 'r') as file:
+    project_list = [line.strip() for line in file] #In case there is a mistake of more than 1 project
+    project = project_list[0]
+
 
 # Print the list of explore names
 print('The cleansing for the following explores will begin:')
@@ -111,7 +120,7 @@ for explore in explores:
 
   #Write all explore related data into data_looker.txt
 
-  text_file.write(str(sdk.lookml_model_explore('snowflake',str(explore))))
+  text_file.write(str(sdk.lookml_model_explore(str(project),str(explore))))
 
   #close file
   text_file.close()
@@ -254,7 +263,7 @@ for explore in explores:
   #open text file
   text_file = open(data_looker_path, "w")
 
-  text_file.write(str(sdk.lookml_model_explore('snowflake',str(explore))))
+  text_file.write(str(sdk.lookml_model_explore(str(project),str(explore))))
 
   #close file
   text_file.close()

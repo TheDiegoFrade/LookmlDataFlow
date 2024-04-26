@@ -73,10 +73,10 @@ view: lookml_joins {
     sql: ${TABLE}.relationship ;;
   }
 
-  dimension: snowflake_table {
-    description: "LookML Snowflake Table (Left)"
+  dimension: table {
+    description: "LookML Table (Left)"
     type: string
-    sql: ${TABLE}.snowflake_table ;;
+    sql: ${TABLE}.table ;;
   }
 
 

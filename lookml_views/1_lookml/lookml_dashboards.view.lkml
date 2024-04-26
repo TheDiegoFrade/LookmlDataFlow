@@ -110,26 +110,26 @@ view: lookml_dashboards {
     label: "Total Tiles"
     type: count_distinct
     sql: ${tile_id} ;;
-    drill_fields: [id,title,tile_title,field,lookml_fields.snowflake_table]
+    drill_fields: [id,title,tile_title,field,lookml_fields.table]
   }
 
   measure: unique_dashboards_count {
     label: "Total Dashboards"
     type: count_distinct
     sql: ${id} ;;
-    drill_fields: [id,title,tile_title,field,lookml_fields.snowflake_table]
+    drill_fields: [id,title,tile_title,field,lookml_fields.table]
   }
 
   measure: unique_fields_count {
     type: count_distinct
     sql: ${field} ;;
-    drill_fields: [id,title,tile_title,field,lookml_fields.snowflake_table]
+    drill_fields: [id,title,tile_title,field,lookml_fields.table]
   }
 
   measure: unique_views_count {
     type: count_distinct
     sql: ${view} ;;
-    drill_fields: [id,title,tile_title,field,lookml_fields.snowflake_table]
+    drill_fields: [id,title,tile_title,field,lookml_fields.table]
   }
 
 }

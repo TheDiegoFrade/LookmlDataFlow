@@ -10,7 +10,7 @@ import configparser
 # Get the parent directory path
 parent_dir = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
 
-looker_api_path = os.path.join(parent_dir, 'LookerDataFlow/lookerdataflow/looker_api')
+looker_api_path = os.path.join(parent_dir, 'LookmlDataFlow/LookmlDataFlow/looker_api')
 
 # Check if the folder already exists
 
@@ -23,7 +23,7 @@ else:
 
 
 # Construct the path to the lookercredentials.ini file
-ini_file_path = os.path.join(parent_dir, 'LookerDataFlow/lookercredentials.ini')
+ini_file_path = os.path.join(parent_dir, 'LookmlDataFlow/lookercredentials.ini')
 
 # Read the credentials from the ini file
 config = configparser.ConfigParser()
@@ -78,7 +78,7 @@ else:
 
 # Check if data_looker.txt exists inside the looker_api folder
 
-data_looker_path = os.path.join(parent_dir, 'LookerDataFlow/lookerdataflow/looker_api/data_looker.txt')
+data_looker_path = os.path.join(parent_dir, 'LookmlDataFlow/LookmlDataFlow/looker_api/data_looker.txt')
 if os.path.exists(data_looker_path):
     print("data_looker.txt exists in looker_api folder.")
 else:
@@ -90,7 +90,7 @@ else:
 text_file = open(data_looker_path, 'a+')
 
 # Specify the path to your explores.txt file
-explore_file_path = os.path.join(parent_dir, 'LookerDataFlow/lookerdataflow/explores.txt')
+explore_file_path = os.path.join(parent_dir, 'LookmlDataFlow/LookmlDataFlow/explores.txt')
 
 # Read the lines from the file
 with open(explore_file_path, 'r') as file:
@@ -121,7 +121,7 @@ for explore in explores:
       data = file.read().replace('\n', '')
 
   #Open text file to not affect data_looker.txt
-  lookml_model_explore_field_path = os.path.join(parent_dir, 'LookerDataFlow/lookerdataflow/looker_api/lookml_model_explore_field_text.txt')
+  lookml_model_explore_field_path = os.path.join(parent_dir, 'LookmlDataFlow/LookmlDataFlow/looker_api/lookml_model_explore_field_text.txt')
   lookml_model_explore_field_text = open(lookml_model_explore_field_path, "w")
 
   #Get all text between the word dimensions= and joins from data
@@ -230,7 +230,7 @@ lookml_model_explore_field_df['group_label'] = lookml_model_explore_field_df['gr
 #lookml_model_explore_field_df['explore'] = 'mn_accounts' #INSERT EXPLORE NAME
 
 #Save lookml_model_explore_field_df as csv file
-lookml_model_explore_field_csv_path = os.path.join(parent_dir, 'LookerDataFlow/lookerdataflow/looker_api/lookml_model_explore_field_csv.csv')
+lookml_model_explore_field_csv_path = os.path.join(parent_dir, 'LookmlDataFlow/LookmlDataFlow/looker_api/lookml_model_explore_field_csv.csv')
 lookml_model_explore_field_df.to_csv(lookml_model_explore_field_csv_path,index=False)
 
 
@@ -263,7 +263,7 @@ for explore in explores:
   with open(data_looker_path, 'r') as file:
       data = file.read().replace('\n', '')
   
-  lookml_joins_path = os.path.join(parent_dir, 'LookerDataFlow/lookerdataflow/looker_api/lookml_model_explore_joins_text.txt')
+  lookml_joins_path = os.path.join(parent_dir, 'LookmlDataFlow/LookmlDataFlow/looker_api/lookml_model_explore_joins_text.txt')
   
   lookml_model_explore_joins_text = open(lookml_joins_path, "w")
   lookml_model_explore_joins_search = str(re.search(r'joins=\[(.*?)supported_measure_types', data))
@@ -312,7 +312,7 @@ lookml_model_explore_joins_df = lookml_model_explore_joins_df.loc[(lookml_model_
 lookml_model_explore_joins_for_sankey_df = lookml_model_explore_joins_df[['left_view','joined_view']]
 lookml_model_explore_joins_for_sankey_df = lookml_model_explore_joins_for_sankey_df.drop_duplicates()
 
-lookml_model_explore_joins_csv_path = os.path.join(parent_dir, 'LookerDataFlow/lookerdataflow/looker_api/lookml_model_explore_joins_csv.csv')
+lookml_model_explore_joins_csv_path = os.path.join(parent_dir, 'LookmlDataFlow/LookmlDataFlow/looker_api/lookml_model_explore_joins_csv.csv')
 #to csv
 lookml_model_explore_joins_df.to_csv(lookml_model_explore_joins_csv_path,index=False)
 
@@ -320,7 +320,7 @@ lookml_model_explore_joins_df.to_csv(lookml_model_explore_joins_csv_path,index=F
 
 #Dashboards Text
 
-dashboard_text_path = os.path.join(parent_dir, 'LookerDataFlow/lookerdataflow/looker_api/data_looker_dashboards.txt')
+dashboard_text_path = os.path.join(parent_dir, 'LookmlDataFlow/LookmlDataFlow/looker_api/data_looker_dashboards.txt')
 
 text_file = open(dashboard_text_path, "w")
 
@@ -415,7 +415,7 @@ for i in lookml_dashboards_dataframe.index:
     else:
         lookml_dashboards_dataframe.at[i, 'title_title'] = lookml_dashboards_dataframe.at[i, 'title_title']
 
-lookml_dashboards_csv_path = os.path.join(parent_dir, 'LookerDataFlow/lookerdataflow/looker_api/lookml_dashboards_csv.csv')
+lookml_dashboards_csv_path = os.path.join(parent_dir, 'LookmlDataFlow/LookmlDataFlow/looker_api/lookml_dashboards_csv.csv')
 lookml_dashboards_dataframe.to_csv(lookml_dashboards_csv_path,index=False)
 
 #Last edit to Dashboards CSV
@@ -432,29 +432,29 @@ clean_dashboards_dataframe = clean_dashboards_dataframe.merge(lookml_dashboards_
 clean_dashboards_dataframe = clean_dashboards_dataframe.replace(',','', regex=True)
 clean_dashboards_dataframe = clean_dashboards_dataframe.iloc[:, [0,1,2,3,4,5,6,8,7]]
 
-clean_dashboards_dataframe.to_csv(os.path.join(parent_dir, 'LookerDataFlow/lookerdataflow/looker_api/lookml_dashboards.csv'), index=False)
+clean_dashboards_dataframe.to_csv(os.path.join(parent_dir, 'LookmlDataFlow/LookmlDataFlow/looker_api/lookml_dashboards.csv'), index=False)
 
 # Check if the file exists before attempting to remove it
-if os.path.exists(os.path.join(parent_dir,'LookerDataFlow/lookerdataflow/looker_api/data_looker_dashboards.txt')):
-    os.remove(os.path.join(parent_dir,'LookerDataFlow/lookerdataflow/looker_api/data_looker_dashboards.txt'))
+if os.path.exists(os.path.join(parent_dir,'LookmlDataFlow/LookmlDataFlow/looker_api/data_looker_dashboards.txt')):
+    os.remove(os.path.join(parent_dir,'LookmlDataFlow/LookmlDataFlow/looker_api/data_looker_dashboards.txt'))
     print("data_looker_dashboards.txt File removed successfully.")
 else:
     print("data_looker_dashboards.txt File does not exist.")
 
-if os.path.exists(os.path.join(parent_dir,'LookerDataFlow/lookerdataflow/looker_api/data_looker.txt')):
-    os.remove(os.path.join(parent_dir,'LookerDataFlow/lookerdataflow/looker_api/data_looker.txt'))
+if os.path.exists(os.path.join(parent_dir,'LookmlDataFlow/LookmlDataFlow/looker_api/data_looker.txt')):
+    os.remove(os.path.join(parent_dir,'LookmlDataFlow/LookmlDataFlow/looker_api/data_looker.txt'))
     print("data_looker.txt File removed successfully.")
 else:
     print("data_looker.txt File does not exist.")
 
-if os.path.exists(os.path.join(parent_dir,'LookerDataFlow/lookerdataflow/looker_api/lookml_dashboards_csv.csv')):
-    os.remove(os.path.join(parent_dir,'LookerDataFlow/lookerdataflow/looker_api/lookml_dashboards_csv.csv'))
+if os.path.exists(os.path.join(parent_dir,'LookmlDataFlow/LookmlDataFlow/looker_api/lookml_dashboards_csv.csv')):
+    os.remove(os.path.join(parent_dir,'LookmlDataFlow/LookmlDataFlow/looker_api/lookml_dashboards_csv.csv'))
     print("lookml_dashboards_csv.csv File removed successfully.")
 else:
     print("lookml_dashboards_csv.csv File does not exist.")
 
-if os.path.exists(os.path.join(parent_dir,'LookerDataFlow/lookerdataflow/looker_api/lookml_model_explore_joins_text.txt')):
-    os.remove(os.path.join(parent_dir,'LookerDataFlow/lookerdataflow/looker_api/lookml_model_explore_joins_text.txt'))
+if os.path.exists(os.path.join(parent_dir,'LookmlDataFlow/LookmlDataFlow/looker_api/lookml_model_explore_joins_text.txt')):
+    os.remove(os.path.join(parent_dir,'LookmlDataFlow/LookmlDataFlow/looker_api/lookml_model_explore_joins_text.txt'))
     print("lookml_model_explore_joins_text.txt File removed successfully.")
 else:
     print("lookml_model_explore_joins_text.txt File does not exist.")

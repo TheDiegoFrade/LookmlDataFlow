@@ -66,7 +66,7 @@ python lookerdataflow/lookerapicleansing.py
 ![Screenshot 2024-04-25 at 10 57 05 p m](https://github.com/TheDiegoFrade/LookmlDataFlow/assets/40186865/47af9bfc-914f-439e-ba6f-3ec4b91ee3b9)
 
 
-[Looker documentation link](https://cloud.google.com/looker/docs/creating-project-files#uploading_files)
+[Looker Documentation](https://cloud.google.com/looker/docs/creating-project-files#uploading_files)
 
 
 

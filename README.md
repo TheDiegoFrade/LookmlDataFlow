@@ -72,3 +72,6 @@ python lookerdataflow/lookerapicleansing.py
 
 ### Configure your Lookml Model so you include these views and explores, edit as needed.
 
+### Import the **lookml_dataflow.dashboard.lookml** into your Looker project files
+
+[Looker Documentation](https://cloud.google.com/looker/docs/building-lookml-dashboards#lookml_dashboards_folder)

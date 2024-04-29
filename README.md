@@ -35,7 +35,7 @@ source path/to/venv/bin/activate
 ```
 4. Install packages within the virtual environment
 ```
-python -m pip install pandas
+python -m pip install pandas tqdm
 ```
 5. Install the looker SDK:
 ```

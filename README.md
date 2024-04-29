@@ -26,7 +26,7 @@ There are some things you need to do first.
 
 2. Create a virtual environment
 ```
-python3 -m venv path/to/venv
+python3 -m venv path/to/venv or python -m venv path/to/venv
 ```
 
 3. Activate the virtual environment

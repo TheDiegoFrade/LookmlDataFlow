@@ -395,7 +395,7 @@ columns = []
 labels = ["created_at","id","view","tile_id","title_title","fields","model","note"]
 
 #Change dashboard id data frame for the list of dashboards you want the info
-for id in dashboards_ids[890:]:
+for id in dashboards_ids:
    text = str(sdk.dashboard_dashboard_elements(dashboard_id=str(id)))
    split_text = text.split('DashboardElement')
    split_text_series = pd.Series(split_text,dtype="string")

@@ -425,7 +425,7 @@ for id in dashboards_ids:
         note = [str(re.search('note_text=(.*?), note_text_as_html',element).group(1)[1:-1])]
         columns.append(tuple(created_at+id+view+tile_id+tile_title+fields+model+note))
 # Update the progress bar
-    progress_bar.update(1)
+   progress_bar.update(1)
 
 # Close the progress bar
 progress_bar.close()
